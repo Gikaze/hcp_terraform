@@ -12,7 +12,7 @@ terraform {
     organization = "gikaze-org"
 
     workspaces {
-      name = "priv"
+      name = "hcp_terraform"
     }
   }
 
@@ -25,5 +25,6 @@ resource "aws_instance" "myinstance" {
 
   tags = {
     Name = var.INSTANCE_NAME
+    Type = "Private"
   }
 }
