@@ -30,7 +30,7 @@ resource "aws_instance" "myinstance" {
   ami                    = var.AMI
   instance_type          = var.INSTANCE_TYPE
   key_name               = aws_key_pair.instance_key_pair.key_name
-  vpc_security_group_ids = [aws_security_group.instance-allow-sg]
+  vpc_security_group_ids = [aws_security_group.instance-allow-sg.id]
 
   tags = {
     Name = var.INSTANCE_NAME
