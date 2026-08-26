@@ -34,7 +34,7 @@ resource "aws_instance" "myinstance" {
   vpc_security_group_ids = [aws_security_group.instance-allow-sg.id]
 
   tags = {
-    Name = var.INSTANCE_NAME
+    Name = "${var.INSTANCE_NAME}-0${count.index + 1}"
     Type = var.TYPE
   }
 }
