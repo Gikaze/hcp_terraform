@@ -20,6 +20,10 @@ variable "INSTANCE_NAME" {
 
 }
 
+variable "TYPE" {
+  type    = string
+  default = "Private"
+}
 
 variable "INSTANCE_USERNAME" {
   default = "ubuntu"

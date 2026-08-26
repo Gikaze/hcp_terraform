@@ -34,6 +34,6 @@ resource "aws_instance" "myinstance" {
 
   tags = {
     Name = var.INSTANCE_NAME
-    Type = "Private"
+    Type = var.TYPE
   }
 }
