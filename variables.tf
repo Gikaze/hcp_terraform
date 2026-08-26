@@ -20,6 +20,11 @@ variable "INSTANCE_NAME" {
 
 }
 
+variable "NUMBER_OF_INSTANCES" {
+  type    = number
+  default = 2
+}
+
 variable "TYPE" {
   type    = string
   default = "Private"

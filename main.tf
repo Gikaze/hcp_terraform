@@ -27,6 +27,7 @@ resource "aws_key_pair" "instance_key_pair" {
 }
 
 resource "aws_instance" "myinstance" {
+  count                  = var.NUMBER_OF_INSTANCES
   ami                    = var.AMI
   instance_type          = var.INSTANCE_TYPE
   key_name               = aws_key_pair.instance_key_pair.key_name
