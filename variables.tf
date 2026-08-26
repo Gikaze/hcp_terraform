@@ -8,6 +8,11 @@ variable "INSTANCE_TYPE" {
   default = "t3.micro"
 }
 
+variable "PATH_TO_PUBLIC_KEY" {
+  type        = string
+  description = "Contenu brut de la clé publique SSH"
+}
+
 
 variable "INSTANCE_NAME" {
   type    = string
